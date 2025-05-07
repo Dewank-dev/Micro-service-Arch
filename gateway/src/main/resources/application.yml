@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: "gateway"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    gateway:
+      access: unrestricted
+
+info:
+  version: "2.4"
+  message: "Welcome to EazyBank Cards prod accounts related local APIs "
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "john@eazybank.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345
